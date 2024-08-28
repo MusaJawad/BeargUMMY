@@ -6,21 +6,6 @@ import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/js
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 
 
-function enterSite() {
-    document.getElementById('landing-page').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-    document.getElementById('background-music').play();
-}
-
-function closeTab() {
-    document.getElementById('landing-page').style.display = 'none';
-    document.getElementById('exit-page').style.display = 'block';
-
-    // Wait 5 seconds before closing the tab
-    setTimeout(function() {
-        window.close();
-    }, 2000);
-}
 
 
 //Create a Three.JS Scene
@@ -177,8 +162,6 @@ document.onmousemove = (e) => {
 
 const clock = new THREE.Clock();
 animate();
-
-
 
 
 
