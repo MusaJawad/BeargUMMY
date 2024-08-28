@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Frank_Knows';
-    src: url('cloudy.ttf') format('truetype');
+    font-family: 'Gummy';
+    src: url('/Images/Gummy.ttf') format('truetype');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importing Roboto font */
@@ -52,7 +52,15 @@ a{
     align-items: center;
 }
 
+#enter-text{
+    color: #ffffff;
+    font-size:50px;
+    margin-left: 0px;
+    font-family: 'Gummy', Arial, sans-serif;
+}
+
 .enter-button {
+
 
     margin-bottom: 30%;
 
@@ -61,6 +69,22 @@ a{
     background-color: #33ff00;
     color: #000000;
     border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    border-radius: 10px;
+}
+
+.enter-button:hover {
+    transform: scale(1.4); /* Slight zoom on hover */
+}
+
+.enter-button img {
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 
