@@ -1,0 +1,406 @@
+@font-face {
+    font-family: 'Frank_Knows';
+    src: url('cloudy.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importing Roboto font */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Frank_Knows', Arial, sans-serif;
+    font-size: 50px;
+    background-size: cover;
+    background-color: #242424;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p {
+    color: #ffffff;
+    font-size:xx-large;
+    margin-left: 50px;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.ca{
+    font-size: large;
+    margin-right: 10px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Reduced padding to shorten the length */
+    background-color: #1a1a1a; /* Dark grey color */
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Left Section (Logo) */
+.navbar-left .navbar-logo {
+    height: 40px; /* Adjust size of the logo */
+    cursor: pointer;
+    padding-right: 10%;
+
+}
+
+
+
+.navbar-center {
+    flex: 1; /* Centers the search bar */
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-center .search-bar::placeholder {
+    color: #19a312; /* Bright green color */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000; /* Creates an outline effect */
+    opacity: 1; /* Ensures full opacity for better visibility */
+}
+
+.navbar-center .search-bar {
+    width: 400px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    background-color: #121212;
+    color: white;
+    padding-right: 45px;
+    box-shadow: 0 0 10px rgba(14, 124, 8, 0.8); /* Green glow effect around the bar */
+}
+
+/* Right Section (Icons) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    padding-right: 2%;
+}
+
+.icon {
+    height: 40px;
+    width: auto; /* Adjust the size of the icons */
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.4); /* Slight zoom on hover */
+}
+
+.icons img {
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.contract-container {
+    color: white;
+    padding: 15px;
+    width: 1100px;
+    word-wrap: break-word;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+h1 {
+    color: rgb(116, 240, 240);
+    text-shadow: 6px 6px 12px rgba(18, 70, 241, 0.8); /* Darker border effect */
+}
+
+/* Full-width Audio Control Bar */
+.audio-control-bar {
+    width: 100%;  /* Full-width but not fixed */
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;  /* Space between 3D model and bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional shadow for depth */
+}
+
+.control-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 5px;
+
+}
+.control-icon {
+    width: 16px;  /* Adjust the width as needed */
+    height: 16px; /* Adjust the height as needed */
+}
+.song-title {
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    font-size: 24px; /* Medium-large font size, like YouTube */
+    font-weight: 700; /* Bold */
+    color: #fff; /* White text */
+    margin: 20px 50px; /* Spacing to align better */
+    text-decoration: none; /* No underline */
+    text-align: left; /* Align to the left, like YouTube titles */
+}
+
+.song-title:hover {
+    color: #ccc; /* Slightly lighter color on hover */
+}
+
+a.song-title {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+
+.volume-slider {
+    width: 300px;
+    cursor: pointer;
+    accent-color: #0E7C08; /* Applies the green color to the slider */
+    background-color: #0E7C08; /* Set the green color for the slider track */
+}
+
+.volume-slider::-webkit-slider-thumb {
+    background-color: #0E7C08; /* Green color for the thumb */
+}
+
+.volume-slider::-moz-range-thumb {
+    background-color: #0E7C08; /* Green color for the thumb in Firefox */
+}
+
+audio {
+    display: none;
+}
+
+
+
+
+.container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers the items horizontally */
+    margin-right: 82.8%;
+    margin-bottom: 0px;
+}
+
+
+.channel-picture {
+    width: 70px;
+    height: 70px;
+    margin-left: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire circular area */
+}
+
+.buy-now-button {
+    margin-left: 20px;
+    background-color: rgb(235, 223, 223);
+    color: rgb(0, 0, 0);
+    font-weight: bold; /* Bold font weight */
+
+    width: 120px;
+    height: 50px;
+    border-radius: 25px; /* Adjusts all four corners equally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100%;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 30px rgba(14, 124, 8, 0.8); /* Green glow effect around the bar */
+
+}
+
+
+
+.buy-now-button:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.buy-now-button img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+.container-vertical {
+    flex-direction: column; /* Makes the items stack vertically */
+    justify-content: center; /* Aligns items vertically in the center */
+    align-items: center; /* Aligns items horizontally in the center */
+}
+
+
+.channel-name{
+    margin-left: 10px;
+    color: #dbd4d4;
+    font-size: large;
+    font-weight: bold; /* Bold font weight */
+
+}
+
+.subscriber-count{
+    color: #dbd4d4;
+    font-size: small;
+    margin-left: 10px;
+
+
+}
+
+.like-button {
+    width: 50px; /* Adjust the size of the icons */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 30px;
+}
+
+.like-button:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.like-button img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+.dislike-button {
+    width: 70px; /* Adjust the size of the icons */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dislike-button:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.dislike-button img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.like-dislike-container {
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    margin-left: 90%;
+    background-color: #9c9595;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 1%;
+    width:7%;
+    box-shadow: 0 0 10px rgba(14, 124, 8, 0.8); /* Green glow effect around the bar */
+
+}
+
+.like-dislike-container .icon {
+    height: 30px; /* Adjust size of the icons */
+    margin-bottom: 10px; /* Space between the buttons */
+    cursor: pointer;
+    
+}
+
+.views{
+
+    color: #ffffff;
+    font-size: large;
+    margin-left: 50px;
+    font-style: italic;
+}
+
+.comment-time {
+    font-size: smaller;
+    color: grey;
+}
+
+
+.description{
+    color: #ffffff;
+    width: 95%;
+    font-size: large;
+    margin-left: 50px;
+    padding:20 px;
+    background-color: #474747;
+    line-height: 1.4; /* Improve readability with more line spacing */
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    border-radius: 10px;
+    
+}
+
+
+
+
+.comment-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.comment-content {
+    max-width: 600px;
+}
+
+.comment-header {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.comment-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(14, 124, 8, 0.8); /* Green glow effect around the bar */
+
+}
+
+
+.comments{
+    margin-left:5%;
+}
+
+#container3D canvas {
+    width: 100%;
+    height: 600 px;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  
