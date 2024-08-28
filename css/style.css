@@ -45,7 +45,7 @@ a{
     background-repeat: no-repeat; /* Prevent the background from repeating */
 
     
-    background-image: url(/Images/back.jpg);
+    background-image: url(/Images/back3.png);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,10 +53,13 @@ a{
 }
 
 .enter-button {
+
+    margin-bottom: 30%;
+
     padding: 20px 40px;
     font-size: 20px;
-    background-color: #000;
-    color: #fff;
+    background-color: #33ff00;
+    color: #000000;
     border: none;
     cursor: pointer;
 }
